@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('path/to/quicksand.woff2') format('woff2'),
+        /* Browser Modern */
+        url('path/to/quicksand.woff') format('woff'),
+        /* Browser Modern */
+        url('path/to/quicksand.ttf') format('truetype');
+    /* iOS Legacy */
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #22242a;
+    overflow: hidden;
+    position: relative;
+}
+
+#salju {
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    animation: animasi 20s infinite;
+}
+
+#salju2 {
+    position: absolute;
+    top: -20px;
+    left: 130px;
+    animation: animasi 20s infinite 2s;
+}
+
+#salju3 {
+    position: absolute;
+    top: -20px;
+    right: 130px;
+    animation: animasi 20s infinite 4s;
+}
+
+#salju4 {
+    position: absolute;
+    top: -30px;
+    right: 330px;
+    animation: animasi 20s infinite 10s;
+}
+
+@keyframes animasi {
+    100% {
+        top: 103vh;
+    }
+}
+
+.volumeParent {
+    top: 10px;
+    right: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.line.open {
+    width: 0px;
+    height: 50px;
+    background-color: rgb(206, 205, 205);
+    border-radius: 5px;
+    transform: rotate(-135deg);
+    position: absolute;
+    top: 1px;
+    right: 20px;
+}
+
+.line {
+    width: 5px;
+    height: 50px;
+    background-color: rgb(206, 205, 205);
+    border-radius: 5px;
+    transform: rotate(-135deg);
+    position: absolute;
+    top: 1px;
+    right: 20px;
+}
+
+.parentBox {
+    position: relative;
+}
+
+canvas {
+    background-color: #1b1e22;
+    box-shadow: 1px 1px 25px 1px rgba(0, 0, 0, 0.21);
+}
+
+.boxPopUp {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #b1c8e925;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    transition: .3s;
+    opacity: 0;
+    z-index: -5;
+}
+
+.winner {
+    position: absolute;
+    top: 49.5%;
+    color: white;
+}
+
+.imgMenu {
+    margin-top: 5%;
+    display: flex;
+    gap: 25px;
+}
+
+#ulang {
+    border-radius: 150px;
+
+}
+
+#ulang:hover {
+    box-shadow: 0px 0px 10px 1px #1777ff;
+    border: solid silver;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    gap: 50px;
+    height: max-content;
+    max-width: 1440px;
+
+}
+
+.boxRight {
+    width: 600px;
+    height: 400px;
+    padding-top: 2px;
+}
+
+.title {
+    font-family: josefin sans;
+    color: white;
+    font-size: 2rem;
+    z-index: 99;
+}
+
+.title span {
+    color: #1777ff;
+}
+
+.colXO {
+    display: flex;
+    margin-top: 15%;
+    margin-bottom: 4%;
+}
+
+.desc {
+    font-family: josefin sans;
+    color: rgba(255, 255, 255, 0.534);
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.boxSymbol {
+    width: 100%;
+    height: 150px;
+    /* background-color: #1b1e22; */
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.boxPlayer1 {
+    width: 200px;
+    height: 90%;
+    /* border:solid yellow; */
+    border-right: 1px solid gray;
+    margin-right: 25px;
+}
+
+.boxPlayer2 {
+    width: 200px;
+    height: 90%;
+    /* border:solid green; */
+}
+
+.name {
+    color: white;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.box1-x {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    border: 2px solid rgba(247, 247, 247, 0.055);
+    background-color: #2e2f36bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+
+}
+
+.box1-o {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    border: 2px solid rgba(247, 247, 247, 0.055);
+    background-color: #2e2f36bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.199);
+
+}
+
+.box2-o {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    border: 2px solid rgba(247, 247, 247, 0.055);
+    background-color: #2e2f36bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+
+}
+
+.box2-x {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    border: 2px solid rgba(247, 247, 247, 0.055);
+    background-color: #2e2f36bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.199);
+
+}
+
+.contentBoxSymbol {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.boxContent2 {
+    width: 400px;
+    height: 50px;
+    display: flex;
+    margin-top: 10px;
+}
+
+.btnHistory {
+    width: 50%;
+    height: 100%;
+    border: 2px solid #003cbd;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    font-family: plus jakarta sans;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.boxTimer {
+    width: 50%;
+    height: 100%;
+    background-color: #003cbd;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.boxPlay {
+    width: 400px;
+    height: 50px;
+    background-color: #003cbd;
+    margin-top: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    gap: 5px;
+    cursor: pointer;
+    font-family: plus jakarta sans;
+    letter-spacing: 2px;
+    z-index: 299;
+}
+
+.boxHistory {
+    width: 70%;
+    height: 70vh;
+    background-image: url(bgHistory.jpg);
+    position: absolute;
+    top: 18%;
+    z-index: 112;
+    box-shadow: 1px 1px 25px 1px rgba(0, 0, 0, 0.21);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* padding-top: 5%; */
+    background-size: cover;
+    opacity:0;
+z-index:-10;
+transition:0.3s;
+    padding-bottom: 25px;
+}
+.lineH{
+    width: 5px;
+    height: 100%;
+    background-color: #292931;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.boxClose {
+    width: 130px;
+    height: 35px;
+    display: flex;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(158, 18, 18); */
+    border-radius: 5px;
+    position: absolute;
+    top: 0px;
+    left: -15px;
+    color: white;
+    cursor: pointer;
+    font-weight: 900;
+}
+.boxClose img{
+    z-index: 999;
+    margin-left: -23%;
+}#logoH{
+    margin-top: -4%;
+}
+.boxTitleH{
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:15px;
+}
+.boxTitleH span{
+    color: white;
+    font-size: 1.1rem;
+}
+.lineTitle{
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+.circle1title{
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+}
+.circle2title{
+    height: 20px;
+    width: 20px;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+.kotak1{
+    width: 50px;
+    height: 60px;
+    background-color: #292931;
+  position: absolute;
+  left: 15px;
+}
+.kotak2{
+    width: 50px;
+    height: 30px;
+    background-color: #292931;
+    transform: rotate(-58deg);
+    left: 45px;
+    top: -3px;
+    position: absolute;
+}
+.boxGanti{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding-top: 35px;
+    padding-bottom: 10px;
+}
+.boxContentH {
+    width: 80%;
+    height: 30px;
+    background-color: #292931;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin-top: 15px;
+}
+.teks{
+    font-size: 1rem;
+    color: white;
+font-family: plus jakarta sans;
+font-weight: 400;
+letter-spacing: .5px;
+opacity: .5;
+margin-top: 10%;
+}
+.boxContentH span {
+    color: white;
+    font-family: plus jakarta sans;
+    font-weight: 400;
+
+}
+
+.boxContentH img {
+    position: absolute;
+    top: 2.5px;
+    left: 60px;
+}

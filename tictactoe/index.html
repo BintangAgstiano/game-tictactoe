@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33886cee1c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="volumeParent">
+                <img src="volume.png" width="50">
+                <div class="line"></div>
+            </div>
+            <div class="parentBox">
+                <canvas></canvas>
+                <div class="boxPopUp">
+                    <div id="mahkota">
+                        <img src="mahkota.png" width="200">
+                    </div>
+                    <span class="winner">Player <span class="angkaWinner"></span> winner</span>
+                    <img src="pita2-removebg-preview.png" width="300" style="margin-top: 15px;">
+                    <div class="imgMenu">
+                        <img id="ulang" src="ulang.png" width="60">
+              
+                    </div>
+
+                </div>
+            </div>
+            <div class="boxRight">
+                <div class="title">Tic Tac <span>Toe</span></div>
+                <div class="desc">Selamat datang, Selamat bermain !</div>
+                <div class="boxSymbol">
+                    <div class="boxPlayer1">
+                        <div class="name">Player1 Symbol:</div>
+                        <div class="contentBoxSymbol">
+                            <div class="box1-x">X</div>
+                            <div class="box1-o">O</div>
+                        </div>
+                    </div>
+                    <div class="boxPlayer2">
+                        <div class="name">Player2 Symbol:</div>
+                        <div class="contentBoxSymbol">
+                            <div class="box2-x">X</div>
+                            <div class="box2-o">O</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxContent2">
+                    <div class="btnHistory">HISTORY</div>
+                    <div class="boxTimer"><span class="time">10</span>S</div>
+                </div>
+                <div class="boxPlay"> PLAY GAME</div>
+            </div>
+            <img id="salju" src="salju.png" width="30">
+            <img id="salju2" src="salju.png" width="20">
+            <img id="salju3" src="salju.png" width="20">
+            <img id="salju4" src="salju.png" width="25">
+
+            <div class="boxHistory">
+                <!-- <img id="logoH" src="logoHistory.png" width="200"> -->
+                <div class="boxTitleH">
+                    <div class="lineTitle"></div>
+                    <div class="circle1title"></div>
+                    <div class="circle2title"></div>
+                    <span>HISTORY</span>
+                    <div class="circle2title"></div>
+                    <div class="circle1title"></div>
+                    <div class="lineTitle"></div>
+                </div>
+                <div class="boxClose">
+                    <div class="kotak1"></div>
+                    <div class="kotak2"></div>
+                    <img src="turnLeft.png" width="40">
+                </div>
+                <div class="boxGanti"></div>
+                <!-- <div class="boxContentH">
+                    <img src="mahkota.png" width="30">
+                   <span>PLAYER 1</span>
+                   <span>VS</span>
+                   <span>PLAYER 2</span>
+                </div> -->
+                
+            </div>
+        </div>
+        <audio id="audioBg" src="Free Fire 2018 Winterland theme song (slowed).mp3"></audio>
+        <audio id="audio1" src="interface-124464.mp3"></audio>
+        <audio id="audioBonus" src="game-bonus-144751.mp3"></audio>
+        <audio id="audioStart" src="startSound.mp3"></audio>
+        <audio id="audioTime" src="time.mp3"></audio>
+        <audio id="fail" src="fail.mp3"></audio>
+        <script src="app.js"></script>
+</body>
+
+</html>
+
+<!-- <div class="colXO">
+    <img src="x.png" width="100">
+    <img src="bulat.png" width="100">
+</div> -->
